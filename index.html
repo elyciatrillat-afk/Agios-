@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agios : récupère les frais bancaires prélevés à tort</title>
+<meta name="description" content="Dépose ton relevé : on repère tous les frais, on chiffre le total sur 12 mois et on te prépare le courrier de réclamation. 19 €, une seule fois.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Récupère les frais bancaires que ta banque t'a prélevés à tort">
+<meta property="og:description" content="Toutes les lignes de frais repérées, le total sur 12 mois, le courrier de réclamation prêt. 19 €, une seule fois.">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0B3B2E;--red:#D7263D;--bg:#F3F5F1;--line:#D5DBD3;--mute:#48564F;
+--head:"Archivo","Arial Black",system-ui,sans-serif;
+--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--g);font:18px/1.55 var(--body);padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+main{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:var(--head);font-weight:900;line-height:1.05;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(2.1rem,9.4vw,3.4rem);padding-top:40px}
+h2{font-size:1.4rem;line-height:1.15}
+p{margin:0}
+.lead{margin-top:20px;color:var(--mute)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;background:var(--g);color:#fff;font:700 1.1rem var(--body);text-decoration:none;border-radius:4px;border:3px solid var(--g)}
+.btn:hover{background:#fff;color:var(--g)}
+.btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.cta{margin-top:28px}
+.small{font-size:.9rem;color:var(--mute);margin-top:10px}
+.stmt{margin-top:40px;background:#fff;border:1px solid var(--line);border-top:6px solid var(--g);padding:16px 18px 8px;font-family:var(--mono);font-size:.88rem}
+.stmt .t{font-weight:700;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.l{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.l b{white-space:nowrap}
+.fee{color:var(--red)}
+.fee span:first-child{background:rgba(215,38,61,.1);padding:0 4px}
+.tot{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:10px -18px 0;padding:14px 18px;background:var(--red);color:#fff;font-family:var(--head);font-weight:900;font-size:1.25rem}
+.tot b{font-size:1.7rem}
+.note{padding:10px 0 12px;font-size:.8rem;color:var(--mute);font-family:var(--body)}
+.gain{margin-top:56px;display:grid;gap:28px}
+.gain div{border-left:4px solid var(--red);padding-left:16px}
+.gain p{margin-top:6px;color:var(--mute)}
+.end{margin-top:56px}
+footer{max-width:640px;margin:56px auto 0;padding:24px 20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 24px;font-size:.9rem}
+footer a{color:var(--mute);padding:6px 0}
+.bar{position:fixed;left:0;right:0;bottom:0;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.bar .btn{max-width:600px;margin:0 auto}
+@media(min-width:760px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<main>
+<h1>Récupère les frais bancaires que ta banque t'a prélevés à tort</h1>
+<p class="lead">Commissions d'intervention, frais de rejet, options inutilisées : ils s'accumulent par petites lignes illisibles. La plupart sont plafonnés par la loi, et presque personne ne les conteste.</p>
+<a class="btn cta" href="https://buy.stripe.com/test_eVq14m5dg84L9lf3OY2Ji00">Analyser mon relevé : 19 €</a>
+<p class="small">Paiement unique et sécurisé par Stripe. Résultat envoyé par email sous 48 h.</p>
+
+<section class="stmt" aria-label="Exemple de relevé analysé">
+<div class="t">Relevé : lignes de frais repérées</div>
+<div class="l fee"><span>Commission d'intervention</span><b>-8,00 €</b></div>
+<div class="l fee"><span>Commission d'intervention</span><b>-8,00 €</b></div>
+<div class="l fee"><span>Rejet de prélèvement</span><b>-20,00 €</b></div>
+<div class="l fee"><span>Option alerte SMS, chaque mois</span><b>-2,90 €</b></div>
+<div class="tot"><span>Sur 12 mois</span><b>412 €</b></div>
+<p class="note">Exemple. Ton total vient de ton propre relevé.</p>
+</section>
+
+<section class="gain">
+<div><h2>Toutes tes lignes de frais, repérées</h2><p>Tu n'as rien à chercher dans ton relevé : chaque commission et chaque option facturée est listée.</p></div>
+<div><h2>Le total sur douze mois, face aux plafonds légaux</h2><p>Tu vois ce qui dépasse ce que la loi autorise.</p></div>
+<div><h2>Le courrier de réclamation, prêt à envoyer</h2><p>Rédigé avec tes chiffres et adressé à la bonne agence. Tu l'imprimes ou tu l'envoies par email.</p></div>
+</section>
+
+<section class="end">
+<h2>Ton analyse sous 48 h, pour 19 €</h2>
+<a class="btn cta" href="https://buy.stripe.com/test_eVq14m5dg84L9lf3OY2Ji00">Analyser mon relevé : 19 €</a>
+<p class="small">Paiement unique. Après le paiement, envoie ton relevé des 12 derniers mois à elyciatrillat@gmail.com. Il est supprimé après l'analyse. Aucun appel à prévoir.</p>
+</section>
+</main>
+
+<footer>
+<a href="#">Mentions légales</a>
+<a href="#">Conditions générales de vente</a>
+<a href="#">Politique de confidentialité</a>
+</footer>
+
+<div class="bar"><a class="btn" href="https://buy.stripe.com/test_eVq14m5dg84L9lf3OY2Ji00">Analyser mon relevé : 19 €</a></div>
+</body>
+</html>
